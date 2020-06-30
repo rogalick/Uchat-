@@ -309,7 +309,7 @@ void *server_communication(void *param) {
         if (!strcmp(packet_type, "reg_s")) {
             // registration system
             printf("reg_s packet received\n");
-            do_login(NULL, client_context->sockfd);
+            do_login(entryspawn, client_context->sockfd);
         }
         else if (!strcmp(packet_type, "login_s")) {
             // login system

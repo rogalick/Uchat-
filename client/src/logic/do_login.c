@@ -1,10 +1,10 @@
 #include "client.h"
 
 void do_login(GtkWidget *entryspawn, int sockfd){
-    
-    //another function
-
-    gtk_widget_destroy(grid);
+    gtk_widget_destroy(fixed);
+    fixed = gtk_fixed_new();
+    gtk_container_add(GTK_CONTAINER(window), fixed);
+    //gtk_widget_destroy(grid);
     scroll = gtk_scrolled_window_new(0,0);
     gtk_fixed_put(GTK_FIXED (fixed), scroll, 0,50);
 
